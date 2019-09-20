@@ -17,14 +17,20 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of bugger is to ...
+The goal of bugger is to help explain some of the more frequent, and frequently
+miunderstood, error messages in R.
+
+If you googled for "Error in {`some_function`}: object of type 'closure'
+is not subsettable" in your first week learning _R_, hopefully you'll
+understand that _R_'s error messages are somewhat opaque.
 
 ## Installation
 
-You can install the released version of bugger from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of bugger from [github](https://github.com/russHyde/bugger.git) with:
 
 ``` r
-install.packages("bugger")
+# library(devtools)
+devtools::install_github("russHyde/bugger")
 ```
 
 ## Example
@@ -36,18 +42,9 @@ library(bugger)
 ## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
+```
+# not ran
+bugger("Error in mean[1]: object of type 'closure' is not subsettable")
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
+This should open up a man page that explains the error in a bit more detail.
